@@ -42,7 +42,9 @@
 
 :root {
     --h1: calc(28pt + 0.15vw);
-    --h1-Mob: calc(18pt + 0.15vw)
+    --h1-Mob: calc(18pt + 0.15vw);
+    --h2: calc(22pt + 0.15vw);
+    --h2-Mob: calc(14pt + 0.15vw)
 }
 
 body, html {
@@ -62,8 +64,8 @@ body, html {
 
 .button__gradient {
     border: none;
-    background-image: -webkit-gradient(linear, left bottom, right top, from(#8f56f3), color-stop(#9a54f5), color-stop(#a651f7), color-stop(#b14df9), color-stop(#bc49fa), color-stop(#b93adc), color-stop(#b32dbf), color-stop(#aa21a4), color-stop(#86166e), to(#5d1442));
     background-image: -o-linear-gradient(left bottom, #8f56f3, #9a54f5, #a651f7, #b14df9, #bc49fa, #b93adc, #b32dbf, #aa21a4, #86166e, #5d1442);
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#8f56f3), color-stop(#9a54f5), color-stop(#a651f7), color-stop(#b14df9), color-stop(#bc49fa), color-stop(#b93adc), color-stop(#b32dbf), color-stop(#aa21a4), color-stop(#86166e), to(#5d1442));
     background-image: linear-gradient(to right top, #8f56f3, #9a54f5, #a651f7, #b14df9, #bc49fa, #b93adc, #b32dbf, #aa21a4, #86166e, #5d1442);
     padding: 8px 20px;
     border-radius: 40px;
@@ -83,6 +85,7 @@ body, html {
     color: #fbfbfc;
     font-family: 'Jost__Light';
     letter-spacing: 0.03em;
+    font-size: calc(10pt + 0.15vw);
 }
 
 .sp__one {
@@ -95,6 +98,8 @@ body, html {
 .multi__color {
     font-family: 'Jost__Black';
     font-size: var(--h1);
+    background: -webkit-gradient(linear, left top, right top, from(#258ffe), to(#fa35de));
+    background: -o-linear-gradient(left, #258ffe 0%, #fa35de 100%);
     background: linear-gradient(to right, #258ffe 0%, #fa35de 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -199,5 +204,113 @@ body, html {
 @media screen and (max-width: 320px) {
     .video__src img:nth-child(3) {
         left: 25.20px;
+    }
+}
+
+/* ********************************************** */
+
+.Section__fluid__two {
+    /* background-image: linear-gradient(to right top, #0e1319, #0f141a, #11161b, #12171c, #13181d, #151a1f, #161b21, #181d23, #1b2026, #1d2329, #20272d, #232a30); */
+    height: auto;
+    background: -o-radial-gradient(circle farthest-side, #0e1319, #242b31);
+    background: radial-gradient(circle farthest-side, #0e1319, #242b31);
+    padding: 60px 0px 60px 0px;
+    margin-top: -5px;
+}
+
+.row__grey {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column__grey {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.left__gry__col {
+    /* border: 1px solid white; */
+    height: auto;
+    padding: 0px 60px;
+}
+
+.Right__gry__col {
+    height: auto;
+    /* border: 1px solid white; */
+}
+
+.left__gry__col p {
+    color: #fbfbfc;
+    font-family: 'Jost__Regular';
+    letter-spacing: 0.03em;
+    font-size: calc(12pt + 0.15vw);
+}
+
+.left__gry__col p span {
+    color: #c1ab31;
+}
+
+.left__gry__col h2 {
+    color: #f7f8fb;
+    font-family: 'Jost__Bold';
+    font-size: var(--h2);
+    line-height: 1.3195;
+}
+
+.left__gry__col .muti__blue {
+    background: -webkit-gradient(linear, left top, right top, from(#258ffe), to(#fa35de));
+    background: -o-linear-gradient(left, #258ffe 0%, #fa35de 100%);
+    background: linear-gradient(to right, #258ffe 0%, #fa35de 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left__gry__col .bg__sp {
+    background: -webkit-gradient(linear, left top, right top, from(#258ffe), to(#fa35de));
+    background: -o-linear-gradient(left, #258ffe 0%, #fa35de 100%);
+    background: linear-gradient(to right, #258ffe 0%, #fa35de 100%);
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .left__gry__col br {
+        display: none;
+    }
+    .left__gry__col h2 {
+        font-size: var(--h2-Mob);
+        line-height: 1.6195;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .row__grey {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .left__gry__col {
+        padding: 0px 20px;
     }
 }
